@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
         android:ems="10"
-        android:hint="@string/mail_text"
+        android:hint="tsunagu@gmail.com"
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -35,8 +35,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
         android:ems="10"
-        android:hint="@string/password_text"
+        android:hint="英数字6文字以上"
         android:inputType="textPassword"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginMailEdit" />
@@ -53,12 +54,31 @@
         app:layout_constraintTop_toBottomOf="@+id/loginPassEdit" />
 
     <Button
-        android:id="@+id/ReturnBtn"
+        android:id="@+id/RegisterBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
-        android:text="@string/back_text"
+        android:layout_marginEnd="70dp"
+        android:text="@string/createAcount_text"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/LoginBtn"
         app:layout_constraintTop_toTopOf="@+id/LoginBtn" />
+
+    <TextView
+        android:id="@+id/mailTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:text="@string/mail_text"
+        app:layout_constraintBottom_toTopOf="@+id/loginMailEdit"
+        app:layout_constraintStart_toStartOf="@+id/loginMailEdit" />
+
+    <TextView
+        android:id="@+id/passTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/password_text"
+        app:layout_constraintBottom_toTopOf="@+id/loginPassEdit"
+        app:layout_constraintStart_toStartOf="@+id/loginPassEdit" />
 </androidx.constraintlayout.widget.ConstraintLayout>

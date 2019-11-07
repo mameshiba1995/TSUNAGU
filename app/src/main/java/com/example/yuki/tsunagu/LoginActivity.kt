@@ -1,53 +1,98 @@
 package com.example.yuki.tsunagu
 
-import android.content.Intent
+
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
+import android.widget.EditText
 import android.widget.Toast
-import io.realm.Realm
+import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_login.*
-import kotlinx.android.synthetic.main.activity_register.*
+import kotlinx.android.synthetic.main.activity_main.*
 
 class LoginActivity : AppCompatActivity() {
-    //Realm
-    private lateinit var  realm: Realm
+
+    //Firebase
+    private lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        realm = Realm.getDefaultInstance()
+        auth = FirebaseAuth.getInstance()
 
+        LoginBtn.setOnClickListener {
 
-        LoginBtn.setOnClickListener{
+            val mail = loginMailEdit.text.toString()
+            val pass = loginPassEdit.text.toString()
 
-            var mail: String = ""
-            var pass: String = ""
-            if(!loginMailEdit.text.isNullOrEmpty()){
-                mail = loginMailEdit.text.toString()
-            }
-            if(!loginPassEdit.text.isNullOrEmpty()){
-                pass = loginPassEdit.text.toString()
-            }
-
-            var user = realm.where(Account::class.java).equalTo("mail", mail).equalTo("pass",pass).findAll()
-
-            if(user.size != 0){
-                //画面遷移
-
-
+            if(mail.equals("")){
+                Toast.makeText(
+                    baseContext, "メールアドレスを入力してください",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }else if(pass.equals("")) {
+                Toast.makeText(
+                    baseContext, "パスワードを入力してください",
+                    Toast.LENGTH_SHORT
+                ).show()
             } else {
-                Toast.makeText(applicationContext, "アドレスまたはパスワードが違います。", Toast.LENGTH_SHORT).show()
+
+                auth.signInWithEmailAndPassword(mail, pass)
+                    .addOnCompleteListener(this) { task ->
+                        if (task.isSuccessful) {
+                            Toast.makeText(
+                                baseContext, "ログインしました。",
+                                Toast.LENGTH_SHORT
+                            ).show()
+                        } else {
+                            Toast.makeText(
+                                baseContext, "メールアドレスまたはパスワードが違います。",
+                                Toast.LENGTH_SHORT
+                            ).show()
+                        }
+
+                    }
             }
-
         }
 
-        ReturnBtn.setOnClickListener{
-            //タイトルへ戻る
-            finish()
+        RegisterBtn.setOnClickListener {
+
+            val mail = loginMailEdit.text.toString()
+            val pass = loginPassEdit.text.toString()
+
+            if(mail.equals("")){
+                Toast.makeText(
+                    baseContext, "メールアドレスを入力してください",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }else if(pass.equals("")) {
+                Toast.makeText(
+                    baseContext, "パスワードを入力してください",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }else if(pass.length <6) {
+                Toast.makeText(
+                    baseContext, "パスワードは6文字以上で入力してください",
+                    Toast.LENGTH_SHORT
+                ).show()
+            } else {
+                auth.createUserWithEmailAndPassword(mail, pass)
+                    .addOnCompleteListener(this) { task ->
+                        if (task.isSuccessful) {
+                            Toast.makeText(
+                                baseContext, "登録しました。",
+                                Toast.LENGTH_SHORT
+                            ).show()
+                        } else {
+                            Toast.makeText(
+                                baseContext, "登録できませんでした。",
+                                Toast.LENGTH_SHORT
+                            ).show()
+                        }
+                    }
+            }
         }
+
     }
-
-
-
 }

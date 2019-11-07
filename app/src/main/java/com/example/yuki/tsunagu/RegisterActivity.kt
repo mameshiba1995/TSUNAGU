@@ -2,10 +2,8 @@ package com.example.yuki.tsunagu
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
 import io.realm.Realm
-import io.realm.RealmResults
 import io.realm.kotlin.createObject
 import io.realm.kotlin.where
 import kotlinx.android.synthetic.main.activity_register.*
@@ -22,7 +20,7 @@ class RegisterActivity : AppCompatActivity() {
 
         realm = Realm.getDefaultInstance()
 
-        registerBtn.setOnClickListener{
+        RegisterBtn.setOnClickListener{
             var name: String = ""
             var mail: String = ""
             var pass: String = ""
