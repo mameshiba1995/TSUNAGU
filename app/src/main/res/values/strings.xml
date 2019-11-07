@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">TSUNAGU</string>
+    <string name="login_text">ログイン</string>
+    <string name="createAcount_text">新規登録</string>
+    <string name="name_text">名前</string>
+    <string name="mail_text">メールアドレス</string>
+    <string name="password_text">パスワード</string>
+    <string name="register_text">登録</string>
+    <string name="back_text">戻る</string>
+    <string name="title_activity_login">Sign in</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+</resources>
