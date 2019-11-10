@@ -1,14 +1,12 @@
 package com.example.yuki.tsunagu
 
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_login.*
-import kotlinx.android.synthetic.main.activity_main.*
 
 class LoginActivity : AppCompatActivity() {
 
@@ -21,7 +19,7 @@ class LoginActivity : AppCompatActivity() {
 
         auth = FirebaseAuth.getInstance()
 
-        LoginBtn.setOnClickListener {
+        rootLoginBtn.setOnClickListener {
 
             val mail = loginMailEdit.text.toString()
             val pass = loginPassEdit.text.toString()
@@ -45,6 +43,10 @@ class LoginActivity : AppCompatActivity() {
                                 baseContext, "ログインしました。",
                                 Toast.LENGTH_SHORT
                             ).show()
+
+                            val main =  Intent(this, MainActivity::class.java)
+                            startActivity(main)
+
                         } else {
                             Toast.makeText(
                                 baseContext, "メールアドレスまたはパスワードが違います。",
@@ -56,7 +58,7 @@ class LoginActivity : AppCompatActivity() {
             }
         }
 
-        RegisterBtn.setOnClickListener {
+        rootRegisterBtn.setOnClickListener {
 
             val mail = loginMailEdit.text.toString()
             val pass = loginPassEdit.text.toString()

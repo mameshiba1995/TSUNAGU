@@ -16,4 +16,8 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
+    <string name="search_text">さがす</string>
+    <string name="etcText">その他</string>
+    <string name="cat_serch">猫を探す</string>
+    <string name="dog_search">犬を探す</string>
 </resources>

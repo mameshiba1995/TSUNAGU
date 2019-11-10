@@ -20,7 +20,7 @@ class RegisterActivity : AppCompatActivity() {
 
         realm = Realm.getDefaultInstance()
 
-        RegisterBtn.setOnClickListener{
+        rootRegisterBtn.setOnClickListener{
             var name: String = ""
             var mail: String = ""
             var pass: String = ""
@@ -44,7 +44,7 @@ class RegisterActivity : AppCompatActivity() {
                     val nextId = (maxId?.toLong() ?: 0L) + 1L
                     val account = realm.createObject<Account>(nextId)
                     account.dateTime = Date()
-                    account.name = name
+                    //account.name = name
                     account.mail = mail
                     account.pass = pass
                 }

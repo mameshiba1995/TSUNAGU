@@ -11,5 +11,7 @@ class CustomApplication : Application(){
         Realm.init(this)
         val config = RealmConfiguration.Builder().build()
         Realm.setDefaultConfiguration(config)
+
+
     }
 }
