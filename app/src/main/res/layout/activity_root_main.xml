@@ -6,4 +6,113 @@
     android:layout_height="match_parent"
     tools:context=".RootMainActivity">
 
+<!--    <EditText-->
+<!--        android:id="@+id/petnameEdit"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="80dp"-->
+<!--        android:layout_marginBottom="16dp"-->
+<!--        android:ems="10"-->
+<!--        android:inputType="textPersonName"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/petAgeText"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/petageEdit"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginBottom="16dp"-->
+<!--        android:ems="10"-->
+<!--        android:inputType="textPersonName"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/petGenderText"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/petAgeText" />-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/areaEdit"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:ems="10"-->
+<!--        android:inputType="textPersonName"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/petgenderText"-->
+<!--        tools:layout_editor_absoluteY="365dp" />-->
+
+<!--    <RadioGroup-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentLeft="true"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_marginLeft="83dp"-->
+<!--        android:layout_marginStart="83dp"-->
+<!--        android:layout_marginTop="73dp" >-->
+
+<!--    <RadioButton-->
+<!--        android:id="@+id/radioButton1"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_weight="1"-->
+<!--        android:checked="true"-->
+<!--        android:text="雄"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/petGenderText"-->
+<!--        tools:layout_editor_absoluteY="273dp" />-->
+
+<!--    <RadioButton-->
+<!--        android:id="@+id/radioButton2"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:layout_weight="1"-->
+<!--        android:text="雌"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/radioButton1"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/petGenderText" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/petCreateBtn"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="40dp"-->
+<!--        android:text="@string/createAcount_text"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/areaEdit" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/petNameText"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="@string/name_text"-->
+<!--        android:textAppearance="@style/TextAppearance.AppCompat.Medium"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/petnameEdit"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/petnameEdit" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/petAgeText"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="@string/age_text"-->
+<!--        android:textAppearance="@style/TextAppearance.AppCompat.Medium"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/petageEdit"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/petnameEdit" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/petGenderText"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="@string/gender_text"-->
+<!--        android:textAppearance="@style/TextAppearance.AppCompat.Medium"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/radioButton1"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/petageEdit" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/petgenderText"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        android:text="@string/area_text"-->
+<!--        android:textAppearance="@style/TextAppearance.AppCompat.Medium"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/areaEdit"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/radioButton1"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/radioButton1" />-->
 </androidx.constraintlayout.widget.ConstraintLayout>
