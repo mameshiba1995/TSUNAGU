@@ -23,4 +23,7 @@
     <string name="age_text">年齢</string>
     <string name="gender_text">性別</string>
     <string name="area_text">地域</string>
+    <string name="osu_text">おす</string>
+    <string name="mesu_text">めす</string>
+    <string name="touroku_text">登録</string>
 </resources>
